@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200&family=Raleway:wght@100&family=Roboto+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(243, 236, 236, 0.867);
+    margin: auto;
+    background-image: url(img/back.webp);
+}
+
+li {
+    list-style: none;
+}
+
+/* loading screen */
+#preloader {
+    background: #000 url(img/loading.gif) no-repeat center;
+    background-size: 15%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+
+.container {
+    background-color: black;
+    color: white;
+    width: 35%;
+    margin: auto;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Header */
+
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+    background-color: rgb(10, 10, 10);
+}
+
+.header p {
+    font-size: 0.8em;
+}
+
+
+/* navigasi */
+
+.rooms {
+    padding: 7px 15px 15px 15px;
+    background-color: rgb(10, 10, 10);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.room {
+    color: rgb(238, 241, 37);
+}
+
+.see-all {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.see-all:hover {
+    color: rgb(241, 245, 18);
+}
+
+.menu {
+    padding: 5px;
+    background-color: rgb(10, 10, 10);
+    display: grid;
+}
+
+.menu ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.menu-list a {
+    position: relative;
+}
+
+.menu-list a::after {
+    content: '';
+    position: absolute;
+    transform: scaleX(0);
+    width: 50%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color:
+        #0087ca;
+    transition: 0.25s;
+}
+
+.menu-list a:hover::after {
+    transform: scaleX(1.1);
+    left: 30px;
+    transform-origin: bottom left;
+}
+
+.menu li a:hover {
+    color: rgb(238, 241, 37);
+}
+
+.menu li:hover {
+    list-style: none;
+}
+
+/* Penutup navigasi */
+
+
+/* Content layout */
+.content {
+    width: 95%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.feature {
+    display: flex;
+    height: 300px;
+}
+
+.feature-left {
+    position: relative;
+    flex: 0.7;
+    box-shadow: 0px 0px 2px rgba(95, 91, 77, 0.5);
+    padding: 4px;
+    box-sizing: border-box;
+    height: 300px;
+}
+
+.feature-right {
+    flex: 0.9;
+    float: right;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.features-1 {
+    position: relative;
+    box-shadow: 0px 0px 2px rgba(95, 91, 77, 0.5);
+    height: 45%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.features-2 {
+    position: relative;
+    margin-top: 10%;
+    box-shadow: 0px 0px 2px rgba(95, 91, 77, 0.5);
+    height: 45%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Penutup content layout */
+
+
+
+/* content  */
+
+.icon {
+    float: left;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border-radius: 50%;
+    transition: 0.5s;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+.icon img {
+    width: 30px;
+    height: 40px;
+}
+
+/* Content Hover */
+.feature-left:hover .icon {
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.feature-right:hover .icon {
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.feature-left:hover {
+    background-color: rgb(22, 22, 22);
+    border-radius: 20px;
+}
+
+.features-1:hover {
+    background-color: rgb(22, 22, 22);
+    border-radius: 20px;
+}
+
+.feature-left:hover .title {
+    color: white;
+}
+
+.features-1:hover .title-1 {
+    color: white;
+}
+
+.features-2:hover .title-1 {
+    color: white;
+}
+
+.feature-left:hover .watt .number {
+    color: rgb(238, 241, 37);
+}
+
+.feature-left:hover .watt .txt {
+    color: rgb(238, 241, 37);
+}
+
+.feature-left,
+.features-1,
+.features-2,
+.icon,
+.title {
+    transition: 0.4s;
+}
+
+/* Swicth */
+.swicth {
+    position: absolute;
+    left: 140px;
+    top: 35px;
+    transform: translate(-50%, -50%);
+}
+
+.swicth-1 {
+    position: absolute;
+    left: 180px;
+    top: 35px;
+    transform: translate(-50%, -50%);
+}
+
+#toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    -webkit-appearance: none;
+    outline: none;
+    box-shadow: inset 0px 1px 5px rgb(255, 255, 255);
+    border-radius: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#toggle:checked {
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 0px 2px 5px rgb(0, 0, 0);
+}
+
+#toggle::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(211, 208, 208);
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0, .5);
+    transition: 0.3s;
+}
+
+#toggle:checked::before {
+    left: 35px;
+}
+
+/* isi content */
+.title {
+    color: rgba(221, 221, 221, 0.877);
+    position: absolute;
+    margin: 75px 0 0 7px;
+}
+
+.title-1 {
+    color: rgba(221, 221, 221, 0.877);
+    position: absolute;
+    margin: 70px 0 0 7px;
+}
+
+.watt {
+    position: absolute;
+    display: grid;
+    margin: 115px 0 0 10px;
+    grid-template-columns: auto auto;
+    align-items: end;
+}
+
+.watt .number {
+    color: greenyellow;
+    font-size: 35px;
+    font-family: 'Josefin Slab', serif;
+}
+
+.watt .txt {
+    margin: 0 0 4px 2px;
+    color: greenyellow;
+}
+
+.active {
+    margin: 160px 0 0 10px;
+    color: #dddd;
+    position: absolute;
+}
+
+.active-1 {
+    margin: 100px 0 0 8px;
+    color: #dddd;
+    position: absolute;
+}
+
+/* button automatic */
+.button-18 {
+    position: absolute;
+    margin: 200px 0 0 0;
+    align-items: center;
+    background-color: #272727;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    width: 150px;
+    min-height: 40px;
+    min-width: 0px;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    left: 18px;
+}
+
+.button-18:hover,
+.button-18:focus {
+    background-color: #616161;
+    color: #ffffff;
+}
+
+.button-18:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+
+/* button plus */
+.button-34 {
+    position: absolute;
+    margin: 250px 0 0 0;
+    background: #272727;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 70px;
+    word-break: break-word;
+    border: 0;
+    left: 20px;
+}
+
+.button-35 {
+    position: absolute;
+    margin: 250px 0 0 0;
+    background: #272727;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 70px;
+    word-break: break-word;
+    border: 0;
+    left: 100px;
+}
+
+.button-35:hover,
+.button-35:focus {
+    background-color: #616161;
+    color: #ffffff;
+}
+
+.button-34:hover,
+.button-34:focus {
+    background-color: #616161;
+    color: #ffffff;
+}
+
+.button-34:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+
+.button-35:active {
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+}
+
+.button-34:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+
+.button-35:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+}
+
+/* Penutup content */
+
+
+
+/* device power consumsition */
+
+.consumsition {
+    margin-top: 18px;
+    padding: 15px;
+    background-color: rgb(5, 5, 5);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.power {
+    margin-bottom: 5px;
+    width: 95%;
+    padding: 10px 15px 15px 15px;
+    display: grid;
+    grid-template-columns: 50px 300px 90px;
+    justify-content: start;
+}
+
+.icon-power {
+    width: 48px;
+    height: 48px;
+    background: rgba(54, 53, 53, 0.75);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+
+.icon-power img {
+    width: 40px;
+    height: 40px;
+    opacity: none;
+}
+
+.text-power {
+    margin-left: 18px;
+    margin-top: 5px;
+}
+
+.text-power h3 {
+    font-size: 18px;
+}
+
+.text-power p {
+    font-size: 15px;
+}
+
+.device-power {
+    font-size: 20px;
+    color: rgb(184, 250, 84);
+    margin-left: 10px;
+    display: grid;
+    justify-content: end;
+    align-content: center;
+}
+
+
+/* add ikon */
+.radius {
+    display: inline-block;
+    margin: 15px auto;
+    left: 42%;
+    position: sticky;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(rgb(0, 0, 0) 0 0),
+        linear-gradient(rgb(0, 0, 0) 0 0),
+        #000;
+    background-position: center;
+    background-color: #fff;
+    background-size: 50% 2px, 2px 50%;
+    /*thickness = 2px, length = 50% (25px)*/
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.radius a {
+    color: white;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    .feature-left {
+        flex: 0.76;
+    }
+
+    .icon {
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+
+    .icon img {
+        width: 35px;
+    }
+
+    .swicth {
+        left: 120px;
+        top: 35px;
+    }
+
+    .swicth-1 {
+        left: 130px;
+        top: 35px;
+    }
+
+    #toggle {
+        position: relative;
+        width: 45px;
+        height: 25px;
+        background-color: rgb(0, 0, 0);
+        -webkit-appearance: none;
+        outline: none;
+        box-shadow: inset 0px 2px 5px rgb(255, 255, 255);
+        border-radius: 30px;
+        transition: 0.5s;
+    }
+
+    #toggle:checked {
+        background-color: rgb(255, 255, 255);
+        box-shadow: inset 0px 2px 5px rgb(0, 0, 0);
+    }
+
+    #toggle::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(211, 208, 208);
+        border-radius: 50%;
+        box-shadow: 0px 2px 5px rgb(0, 0, 0, .5);
+        transition: 0.3s;
+    }
+
+    #toggle:checked::before {
+        left: 20px;
+    }
+
+    #preloader {
+        background-size: 30%;
+    }
+
+    .button-18 {
+        left: 10px;
+        width: 135px;
+        min-height: 40px;
+        min-width: 0px;
+    }
+
+    .button-34 {
+        width: 60px;
+        left: 8px;
+    }
+
+    .button-35 {
+        width: 60px;
+        left: 85px;
+    }
+
+}

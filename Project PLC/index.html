@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Raleway:wght@200&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <title>Plc </title>
+</head>
+
+<body>
+    <!-- Loading screen -->
+    <div id="preloader">
+        <iframe width="0" height="0" src="https://www.youtube.com/embed/dHC_zyei-5g" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+    </div>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="heading">IIKAK PLC</h1>
+            <p>Manage your home here!</p>
+        </header>
+
+
+
+        <!-- menu -->
+        <div class="rooms">
+            <h2 class="room"> Rooms</h2>
+            <a href="" class="see-all">See-All</a>
+        </div>
+        <nav class="menu">
+            <ul class="menu-list">
+                <li><a href="">Living Room</a></li>
+                <li><a href="">Kitchen</a></li>
+                <li><a href="">Dining Room</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Content -->
+        <div class="content">
+            <div class="feature">
+                <div class="feature-left">
+                    <div class="feature-content">
+                        <div class="icon">
+                            <img src="img/lamp1.png" alt="">
+                        </div>
+                        <div class="swicth">
+                            <input type="checkbox" id="toggle">
+                        </div>
+                        <div class="title">
+                            <h2>Smart Lamp</h2>
+                        </div>
+                        <div class="watt">
+                            <h2 class="number">18</h2>
+                            <p class="txt">Watt</p>
+                        </div>
+                        <div class="active">
+                            <p>Active For 8h</p>
+                        </div>
+                        <button class="button-18" role="button">Automatic</button>
+
+                        <button class="button-34" role="button">+</button>
+                        <button class="button-35" role="button">-</button>
+
+
+
+                    </div>
+
+                </div>
+                <div class="feature-right">
+                    <div class="features-1">
+                        <div class="icon">
+                            <img src="img/lamp1.png" alt="">
+                        </div>
+                        <div class="swicth-1">
+                            <input type="checkbox" id="toggle">
+                        </div>
+                        <div class="title-1">
+                            <h2>Lamp 1</h2>
+                        </div>
+                        <div class="active-1">
+                            <p>Active For 8h</p>
+                        </div>
+                    </div>
+                    <div class="features-2">
+                        <div class="icon">
+                            <img src="img/lamp1.png" alt="">
+                        </div>
+                        <div class="swicth-1">
+                            <input type="checkbox" id="toggle">
+                        </div>
+                        <div class="title-1">
+                            <h2>Lamp 2</h2>
+                        </div>
+                        <div class="active-1">
+                            <p>Active For 8h</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- device power consumsition  -->
+
+        <div class="consumsition">
+            <h2 class="text" style="color: white;">Device Power Consumsition</h2>
+        </div>
+        <div class="power">
+            <div class="icon-power">
+                <img src="img/light_bulb_icon_126685.png" alt="">
+            </div>
+            <div class="text-power">
+                <h3>Dinning room</h3>
+                <p>3 unit</p>
+            </div>
+            <div class="device-power">
+                <p>42kWh</p>
+            </div>
+        </div>
+        <div class="power">
+            <div class="icon-power">
+                <img src="img/light_bulb_icon_126685.png" alt="">
+            </div>
+            <div class="text-power">
+                <h3>Kitchen</h3>
+                <p>2 unit</p>
+            </div>
+            <div class="device-power">
+                <p>25kWh</p>
+            </div>
+        </div>
+        <div class="power">
+            <div class="icon-power">
+                <img src="img/light_bulb_icon_126685.png" alt="">
+            </div>
+            <div class="text-power">
+                <h3>Living Room</h3>
+                <p>5 unit</p>
+            </div>
+            <div class="device-power">
+                <p>53kWh</p>
+            </div>
+        </div>
+
+        <!-- Ikon add -->
+
+
+        <button class="plus radius"><a href="">k</a>
+        </button>
+
+    </div>
+
+
+
+
+    <script>
+
+        var Loader = document.getElementById("preloader");
+
+        window.addEventListener("load", function () {
+            Loader.style.display = "none"
+        })
+
+    </script>
+</body>
+
+</html>
